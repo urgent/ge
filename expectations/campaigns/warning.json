@@ -1,0 +1,305 @@
+{
+  "data_asset_type": "Dataset",
+  "expectation_suite_name": "campaigns.warning",
+  "expectations": [
+    {
+      "expectation_type": "expect_table_row_count_to_be_between",
+      "kwargs": {
+        "max_value": 2,
+        "min_value": 1,
+        "result_format": {
+          "result_format": "COMPLETE"
+        }
+      },
+      "meta": {
+        "BasicSuiteBuilderProfiler": {
+          "confidence": "very low"
+        }
+      }
+    },
+    {
+      "expectation_type": "expect_table_column_count_to_equal",
+      "kwargs": {
+        "value": 16,
+        "result_format": {
+          "result_format": "COMPLETE"
+        }
+      },
+      "meta": {
+        "BasicSuiteBuilderProfiler": {
+          "confidence": "very low"
+        }
+      }
+    },
+    {
+      "expectation_type": "expect_table_columns_to_match_ordered_list",
+      "kwargs": {
+        "column_list": [
+          "id",
+          "cpc",
+          "name",
+          "enabled",
+          "currency",
+          "marketerid",
+          "minimumcpc",
+          "amountspent",
+          "onairreason",
+          "autoarchived",
+          "creationtime",
+          "lastmodified",
+          "_airbyte_ab_id",
+          "_airbyte_emitted_at",
+          "_airbyte_normalized_at",
+          "_airbyte_campaigns_hashid"
+        ],
+        "result_format": {
+          "result_format": "COMPLETE"
+        }
+      },
+      "meta": {
+        "BasicSuiteBuilderProfiler": {
+          "confidence": "very low"
+        }
+      }
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "cpc",
+        "result_format": {
+          "result_format": "COMPLETE"
+        }
+      },
+      "meta": {
+        "BasicSuiteBuilderProfiler": {
+          "confidence": "very low"
+        }
+      }
+    },
+    {
+      "expectation_type": "expect_column_min_to_be_between",
+      "kwargs": {
+        "column": "cpc",
+        "max_value": 0.1,
+        "min_value": 0,
+        "result_format": {
+          "result_format": "COMPLETE",
+          "include_unexpected_rows": true
+        }
+      },
+      "meta": {
+        "BasicSuiteBuilderProfiler": {
+          "confidence": "very low"
+        }
+      }
+    },
+    {
+      "expectation_type": "expect_column_max_to_be_between",
+      "kwargs": {
+        "column": "cpc",
+        "max_value": 1.13,
+        "min_value": -0.87,
+        "result_format": {
+          "result_format": "COMPLETE"
+        }
+      },
+      "meta": {
+        "BasicSuiteBuilderProfiler": {
+          "confidence": "very low"
+        }
+      }
+    },
+    {
+      "expectation_type": "expect_column_mean_to_be_between",
+      "kwargs": {
+        "column": "cpc",
+        "max_value": 1.13,
+        "min_value": -0.87,
+        "result_format": {
+          "result_format": "COMPLETE"
+        }
+      },
+      "meta": {
+        "BasicSuiteBuilderProfiler": {
+          "confidence": "very low"
+        }
+      }
+    },
+    {
+      "expectation_type": "expect_column_median_to_be_between",
+      "kwargs": {
+        "column": "cpc",
+        "max_value": 1.13,
+        "min_value": -0.87,
+        "result_format": {
+          "result_format": "COMPLETE"
+        }
+      },
+      "meta": {
+        "BasicSuiteBuilderProfiler": {
+          "confidence": "very low"
+        }
+      }
+    },
+    {
+      "expectation_type": "expect_column_quantile_values_to_be_between",
+      "kwargs": {
+        "allow_relative_error": true,
+        "column": "cpc",
+        "quantile_ranges": {
+          "quantiles": [0.05, 0.25, 0.5, 0.75, 0.95],
+          "value_ranges": [
+            [-0.87, 1.13],
+            [-0.87, 1.13],
+            [-0.87, 1.13],
+            [-0.87, 1.13],
+            [-0.87, 1.13]
+          ]
+        },
+        "result_format": {
+          "result_format": "COMPLETE"
+        }
+      },
+      "meta": {
+        "BasicSuiteBuilderProfiler": {
+          "confidence": "very low"
+        }
+      }
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "id"
+      },
+      "meta": {
+        "BasicSuiteBuilderProfiler": {
+          "confidence": "very low"
+        }
+      }
+    },
+    {
+      "expectation_type": "expect_column_value_lengths_to_be_between",
+      "kwargs": {
+        "column": "id",
+        "min_value": 1
+      },
+      "meta": {
+        "BasicSuiteBuilderProfiler": {
+          "confidence": "very low"
+        }
+      }
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "_airbyte_emitted_at"
+      },
+      "meta": {
+        "BasicSuiteBuilderProfiler": {
+          "confidence": "very low"
+        }
+      }
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_between",
+      "kwargs": {
+        "column": "_airbyte_emitted_at",
+        "max_value": "2023-06-02 21:36:37.668000+00:00",
+        "min_value": "2021-06-02 16:40:40.689000+00:00",
+        "parse_strings_as_datetimes": true
+      },
+      "meta": {
+        "BasicSuiteBuilderProfiler": {
+          "confidence": "very low"
+        }
+      }
+    }
+  ],
+  "meta": {
+    "BasicSuiteBuilderProfiler": {
+      "batch_kwargs": {
+        "data_asset_name": "campaigns",
+        "datasource": "campaign",
+        "limit": 1000,
+        "schema": "public",
+        "table": "campaigns"
+      },
+      "created_at": 1654218192.1458893,
+      "created_by": "BasicSuiteBuilderProfiler"
+    },
+    "citations": [
+      {
+        "batch_kwargs": {
+          "data_asset_name": "campaigns",
+          "datasource": "campaign",
+          "limit": 1000,
+          "schema": "public",
+          "table": "campaigns"
+        },
+        "batch_markers": {
+          "ge_load_time": "20220603T010311.982324Z"
+        },
+        "batch_parameters": null,
+        "citation_date": "20220603T010312.189710Z",
+        "comment": "BasicSuiteBuilderProfiler added a citation based on the current batch."
+      }
+    ],
+    "columns": {
+      "_airbyte_ab_id": {
+        "description": ""
+      },
+      "_airbyte_campaigns_hashid": {
+        "description": ""
+      },
+      "_airbyte_emitted_at": {
+        "description": ""
+      },
+      "_airbyte_normalized_at": {
+        "description": ""
+      },
+      "amountspent": {
+        "description": ""
+      },
+      "autoarchived": {
+        "description": ""
+      },
+      "cpc": {
+        "description": ""
+      },
+      "creationtime": {
+        "description": ""
+      },
+      "currency": {
+        "description": ""
+      },
+      "enabled": {
+        "description": ""
+      },
+      "id": {
+        "description": ""
+      },
+      "lastmodified": {
+        "description": ""
+      },
+      "marketerid": {
+        "description": ""
+      },
+      "minimumcpc": {
+        "description": ""
+      },
+      "name": {
+        "description": ""
+      },
+      "onairreason": {
+        "description": ""
+      }
+    },
+    "great_expectations_version": "0.12.0+0.g9701509a.dirty",
+    "notes": {
+      "content": [
+        "#### This is an _example_ suite\n\n- This suite was made by quickly glancing at 1000 rows of your data.\n- This is **not a production suite**. It is meant to show examples of expectations.\n- Because this suite was auto-generated using a very basic profiler that does not know your data like you do, many of the expectations may not be meaningful.\n"
+      ],
+      "format": "markdown"
+    }
+  }
+}
